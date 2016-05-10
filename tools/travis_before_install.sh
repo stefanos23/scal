@@ -2,6 +2,9 @@
 
 if [[ $(uname -s) = "Darwin" ]]; then
   echo "Darwin before install start"
+  export CC=/usr/local/bin/gcc-4.8
+  export CXX=/usr/local/bin/gcc-4.8
+  export GYP_DEFINES="gcc-4.8"
   echo "Darwin before install end"
 fi
 
@@ -12,4 +15,3 @@ if [[ $(uname -s) = "Linux" ]]; then
   sudo apt-get update -qq
   echo "Linux before install end"
 fi
-

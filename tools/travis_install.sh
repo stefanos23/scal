@@ -2,6 +2,11 @@
 
 if [[ $(uname -s) = "Darwin" ]]; then
   echo "Darwin install start"
+  curl -o gflags-2.0-no-svn-files.tar.gz https://gflags.googlecode.com/files/gflags-2.0-no-svn-files.tar.gz
+  tar -xzvf gflags-2.0-no-svn-files.tar.gz
+  cd gflags-2.0
+  ./configure && make && sudo make install
+  cd ..
   tools/make_deps.sh
   echo "Darwin install end"
 fi
