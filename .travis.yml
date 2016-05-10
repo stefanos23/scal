@@ -4,20 +4,9 @@ os:
 - linux
 - osx
 compiler:
-- gcc
-addons:
-  apt:
-    packages:
-      - google-perftools
-      - libgoogle-perftools-dev
-      - cmake
-      - libgtest-dev
-      
+- gcc 
 before_install: tools/travis_before_install.sh
 install: tools/travis_install.sh
 script: tools/travis_script.sh
-
 notifications:
   email: false
-  slack:
-    secure
