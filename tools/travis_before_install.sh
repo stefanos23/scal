@@ -2,9 +2,8 @@
 
 if [[ $(uname -s) = "Darwin" ]]; then
   echo "Darwin before install start"
-  export CC=/usr/local/bin/gcc-4.8
-  export CXX=/usr/local/bin/gcc-4.8
-  export GYP_DEFINES="gcc-4.8"
+  brew update
+  brew outdated google-perftools || brew upgrade google-perftools
   echo "Darwin before install end"
 fi
 
