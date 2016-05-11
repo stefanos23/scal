@@ -16,7 +16,6 @@
     ],
     'default_cflags_cc' : [
       '-std=c++11',
-      '-stdlib=libc++',
       '-fno-rtti',
     ],
     'default_ldflags': [
