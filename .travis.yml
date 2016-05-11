@@ -5,8 +5,18 @@ os:
 - osx
 compiler:
 - gcc 
+addons:
+ apt:
+   sources:
+   - ubuntu-toolchain-r-test
+   packages:
+   - gcc-4.8
+   - g++-4.8
+   - google-perftools
+   - gflags
 before_install: tools/travis_before_install.sh
 install: tools/travis_install.sh
 script: tools/travis_script.sh
+
 notifications:
   email: false
