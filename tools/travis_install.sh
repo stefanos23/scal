@@ -24,12 +24,12 @@ if [[ $(uname -s) = "Linux" ]]; then
   
   echo " -> install gflags"
   sudo apt-get install --fix-missing google-perftools libgoogle-perftools-dev cmake libgtest-dev
-  sudo apt-get install gflags
+  # sudo apt-get install gflags
 
-  # wget https://gflags.googlecode.com/files/libgflags0_2.0-1_amd64.deb
-  # wget https://gflags.googlecode.com/files/libgflags-dev_2.0-1_amd64.deb
-  # sudo dpkg -i libgflags0_2.0-1_amd64.deb
-  # sudo dpkg -i libgflags-dev_2.0-1_amd64.deb
+  wget https://gflags.googlecode.com/files/libgflags0_2.0-1_amd64.deb
+  wget https://gflags.googlecode.com/files/libgflags-dev_2.0-1_amd64.deb
+  sudo dpkg -i libgflags0_2.0-1_amd64.deb
+  sudo dpkg -i libgflags-dev_2.0-1_amd64.deb
 
   tools/make_deps.sh
   echo "Linux install end"
