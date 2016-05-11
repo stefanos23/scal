@@ -13,13 +13,14 @@ if [[ $(uname -s) = "Darwin" ]]; then
   cd ..
   # install gflags done.
   
+  tools/make_deps.sh
   echo "Darwin install end"
 fi
 
 if [[ $(uname -s) = "Linux" ]]; then
   echo "Linux install start"
   # We want to compile with g++ 4.8 when rather than the default g++
-  sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 90
+  # sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 90
   
   echo " -> install gflags"
   sudo apt-get install --fix-missing google-perftools libgoogle-perftools-dev cmake libgtest-dev
