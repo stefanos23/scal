@@ -3,14 +3,14 @@
 if [[ $(uname -s) = "Darwin" ]]; then
   echo "Darwin install start"
   
-  echo " -> install gflags"
-  git clone https://github.com/gflags/gflags.git
-  cd gflags
-  ccmake
-  make
-  make test
-  make install
-  cd ..
+  # echo " -> install gflags"
+  # git clone https://github.com/gflags/gflags.git
+  # cd gflags
+  # ccmake
+  # make
+  # make test
+  # make install
+  # cd ..
   # install gflags done.
   
   tools/make_deps.sh
