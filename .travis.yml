@@ -5,7 +5,7 @@
 
 install:
 # /usr/bin/gcc is 4.6 always, but gcc-X.Y is available.
-- if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
+- if [ "$CXX" = "g++" ]; then export CXX="/usr/local/bin/g++-4.8" CC="/usr/local/bin/gcc-4.8"; fi
 - echo ${PATH}
 - echo ${CXX}
 - ${CXX} --version
