@@ -8,6 +8,7 @@ if [[ $(uname -s) = "Darwin" ]]; then
   # brew install gcc48
   # brew outdated google-perftools || brew upgrade google-perftools
   brew outdated gflags || brew upgrade gflags
+  brew outdated glog || brew upgrade glog
   echo "Darwin before install end"
 fi
 

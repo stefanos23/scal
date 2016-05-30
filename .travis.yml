@@ -26,8 +26,7 @@ os:
   - linux
   - osx
 language: cpp
-compiler:
-  - gcc
+compiler: gcc
 before_install: tools/travis_before_install.sh
 script: tools/travis_script.sh
 notifications:
